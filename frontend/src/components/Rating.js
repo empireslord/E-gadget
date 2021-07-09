@@ -70,8 +70,8 @@ const Rating = ({ value, text, color }) => {
   );
 };
 
-Rating.defualtProps = {
-  color: "blue",
+Rating.defaultProps = {
+  color: "#F8e825",
 };
 
 Rating.PropsTypes = {
