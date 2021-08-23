@@ -1,4 +1,4 @@
-import Mongoose from 'mongoose'
+import mongoose from 'mongoose'
 
 const userSchema = mongoose.Schema(
   {
@@ -26,6 +26,6 @@ const userSchema = mongoose.Schema(
   }
 )
 
-const User = mongoosse.model('User', userSchema)
+const User = mongoose.model('User', userSchema)
 
 export default User

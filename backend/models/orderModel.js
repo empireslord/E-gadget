@@ -1,9 +1,9 @@
-import Mongoose from 'mongoose'
+import mongoose from 'mongoose'
 
 const orderSchema = mongoose.Schema(
   {
     user: {
-      type: mongoose.schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User',
     },
@@ -27,14 +27,14 @@ const orderSchema = mongoose.Schema(
       country: { type: String, required: true },
     },
     paymentMethod: {
-      type: string,
+      type: String,
       required: true,
     },
     paymentResult: {
-      id: { type: string },
-      status: { type: string },
-      update_time: { type: string },
-      email_address: { type: string },
+      id: { type: String },
+      status: { type: String },
+      update_time: { type: String },
+      email_address: { type: String },
     },
     taxPrice: {
       type: Number,
@@ -54,7 +54,7 @@ const orderSchema = mongoose.Schema(
     isPaid: {
       type: Boolean,
       required: true,
-      default: fslse,
+      default: false,
     },
     paidAt: {
       type: Date,
@@ -73,6 +73,6 @@ const orderSchema = mongoose.Schema(
   }
 )
 
-const Order = mongoosse.model('Order', orderSchema)
+const Order = mongoose.model('Order', orderSchema)
 
 export default Order
